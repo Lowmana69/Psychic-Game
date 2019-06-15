@@ -1,3 +1,13 @@
+/* 1. Create a background color to make the word pop.
+2. Change the header font to make it more "mystify"
+3. Maybe create a gradient title background. 
+4. Create a colorful button for each individula letters
+  a. Do not know how to render the visited to change when clicked
+5. Make the text font more 'Visible'
+6. Do not forget for the media screen change.
+
+============================== CSS CODE BELOW: ========================= */
+
 @media screen and (max-width: 980px),
   screen and (max-width: 768px),
   screen and (max-width: 640px) {
