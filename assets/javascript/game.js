@@ -1,3 +1,9 @@
+
+/*===================================================================
+======================= L E T T E R - B A N K =======================
+===================================================================*/
+
+
 // Create varaible to hold characters for guessing
 var letters = [
     'A', 'B', 'C', 'D', 'E',
@@ -8,129 +14,88 @@ var letters = [
  'Z'
 ];
 
+
+/*===================================================================
+======================= V A R I A B L E S =======================
+===================================================================*/
+
+
 // Create # variables for each part of the scoreboard: Wins, Loses, Tries, Tries Left
 var wins = 0;
 var loses = 0;
 var tries = 0;
 var triesLeft = 26;
+var randomization;
 
-//Overall browser/window/document function that runs when the player presses a key
+
+/*===================================================================
+======================= F U N C T I O N S =======================
+===================================================================*/
+
+
+function resetTheGame() {
+    document.getElementById("play-again").className = 'hide';
+    document.getElementById("gif").src = '../images/Hypnotic.gif';
+    document.getElementById("result-banner").innerText = 'Let\'s Begin';
+    document.getElementById().values = '';
+    randomization = letters[Math.floor(Math.random() * letters.length)];
+}
+
+function playTheGame() {
+    
+    var imageDisplay;
+
+    switch(true) {
+        case usersGuess === 'A': 
+        case usersGuess === 'B':
+        case usersGuess === 'C':
+        case usersGuess === 'D':
+        case usersGuess === 'E':
+        case usersGuess === 'F': 
+        case usersGuess === 'G':
+        case usersGuess === 'H':
+        case usersGuess === 'I':
+        case usersGuess === 'J':
+        case usersGuess === 'K': 
+        case usersGuess === 'L':
+        case usersGuess === 'M':
+        case usersGuess === 'N':
+        case usersGuess === 'O':
+        case usersGuess === 'P': 
+        case usersGuess === 'Q':
+        case usersGuess === 'R':
+        case usersGuess === 'S':
+        case usersGuess === 'T':
+        case usersGuess === 'U': 
+        case usersGuess === 'V':
+        case usersGuess === 'W':
+        case usersGuess === 'X':
+        case usersGuess === 'Y':
+        case usersGuess === 'Z':
+            imageDisplay = '../images/Winner.gif';
+            document.getElementById("play-again").className = 'show';
+            resetTheGame();                        
+            break;
+        default: 
+            imageDisplay = '../images/Loser.gif';
+            resetTheGame();
+            break;
+    }
+    document.getElementById("result-banner").innerText = message;
+    document.getElementById("gif").scr = imageDisplay;
+}
+
+
+
+
+/*===================================================================
+======================= M A I N - A C T I O N =======================
+===================================================================*/
+
+
+
+
 document.onkeyup = function(event) {
-
-
+    var usersGuess = event.key;
+    playTheGame();
 }
-// Letters that were pressed
-var playersChose = event.key
-
-// Create a random character generator to cycle through the letters and randomly pick a character
-var randomization = letters[Math.floor(Math.random() * letters.length)];
-
-/* Create # of variables to display the counts of: 
-    - what character the player chose, 
-    - the winning count, 
-    - the losing count, 
-    - the count of how many tries, 
-    - and the countdown of how many tries left.
-*/
-
-var playersChoice = document.getElementById("guesses");
-var winsCounter = document.getElementById("wins");
-var lostCounter = document.getElementById("loses");
-var triesCounter = document.getElementById("tries");
-var triesLeftCounter = document.getElementById("tries-left");
-
-// Create variables to display the count and guess on the browser
-
-playersChoice.textContent = playersChose;
-winsCounter.textContent = wins;
-lostCounter.textContent = loses;
-triesCounter.textContent = triesCounter;
-triesLeftCounter.textContent = triesLeftCounter;
-
-// Create logic for determining the player has won, lost, tries, and tries left
-
-switch (true) {
-    case playersChose === 'A':
-        console.log{};
-        break;
-    case playersChose === 'B':
-        console.log();
-        break;
-    case playersChose === 'C':
-        console.log{};
-        break;
-    case playersChose === 'D':
-        console.log();
-        break;
-    case playerChose === 'E':
-        console.log();
-        break;
-    case playersChose === 'F':
-        console.log{};
-         break;
-    case playersChose === 'G':
-        console.log();
-         break;
-    case playersChose === 'H':
-        console.log{};
-         break;
-    case playersChose === 'I':
-        console.log();
-         break;
-    case playerChose === 'J':
-        console.log();
-         break;
-    case playersChose === 'K':
-        console.log{};
-        break;
-    case playersChose === 'L':
-        console.log();
-        break;
-    case playersChose === 'M':
-        console.log{};
-        break;
-    case playersChose === 'N':
-        console.log();
-        break;
-    case playerChose === 'O':
-        console.log();
-        break;
-    case playersChose === 'P':
-        console.log{};
-        break;
-    case playersChose === 'Q':
-        console.log();
-        break;
-    case playersChose === 'R':
-        console.log{};
-        break;
-    case playersChose === 'S':
-        console.log();
-        break;
-    case playerChose === 'T':
-        console.log();
-        break;
-    case playersChose === 'U':
-        console.log{};
-        break;
-    case playersChose === 'V':
-        console.log();
-        break;
-    case playersChose === 'W':
-        console.log{};
-        break;
-    case playersChose === 'X':
-        console.log();
-        break;
-    case playerChose === 'Y':
-        console.log();
-        break;
-    case playersChose === 'Z':
-        console.log();
-        break;
-    default:
-        console.log();
-}
-
-// Create variable that receives the letter that has been clicked
-var guessByPlayer = playersChose.document.getElementById("guesses").value;

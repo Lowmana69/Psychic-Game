@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <iframe width="0" height="0" src="assets/images/01 - Prologue.mp3" frameborder="0" allowfullscreen></iframe>
     <title>Psychic Game</title>
 </head>
 <body>
@@ -31,7 +32,7 @@
     <hr>
     <br>
     <h2>I am guessing a letter from A-Z.</h2>
-    <img src="" alt="">
+    <img id="gif" src="assets/images/Hypnotic.gif" alt="">
     <div class="scoreboard">
         <div id="wins" class="badge">Wins: <span id="score">0</span></div>
         <div id="loses" class="badge">Loses: <span id="score">0</span></div>
@@ -41,8 +42,8 @@
     </div>
     <br>
     <br>
-    <div class="result-banner">
-        <p>You Win!</p>
+    <div id="result-banner">
+        <p>Let's Begin!</p>
     </div>
     <br>
     <br>
@@ -79,6 +80,11 @@
     <br>
     <br>
     <p class="message">Make Your Move!</p>
+
+    <form action="javascript:void(0);">
+        <input id="play-again" type="button" value="Play Again?">
+    </form>
+
     <script src="assets/javascript/game.js"></script>
 </body>
 </html>
