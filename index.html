@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <iframe width="0" height="0" src="assets/images/01 - Prologue.mp3" frameborder="0" allowfullscreen></iframe>
+    <title>Psychic Game</title>
+</head>
+<body>
+    <!-- 1. Create Title Header for Psychic Game.
+    2. Create 4 Variables for keeping score.
+        1. 1 for Wins & 1 for Loses
+        2. Guess count used Up
+        3. Show a list of used up character attempts already
+    3. Create a Variable for Number of Guess 
+        1. Able to be reduce for each attempt
+    4. Create a List of characters for guess attempts
+        a. Meaning Letters & Numbers (if need be)
+    5. Try to include a You Win! or You Lose! Banner
+    6. Try to add and/or images as well sound if possible
+    7. Try to be able to cross out the characters that has been used as well -->
+    
+<!-- =============================== HTML CODE BELOW: =========================== -->
+
+    <header>
+        <h1>Psychic Game</h1> 
+    </header>
+    <br>
+    <hr>
+    <br>
+    <h2>I am guessing a letter from A-Z.</h2>
+    <img id="gif" src="assets/images/Hypnotic.gif" alt="">
+    <div class="scoreboard">
+        <div id="wins" class="badge">Wins: <span id="score">0</span></div>
+        <div id="loses" class="badge">Loses: <span id="score">0</span></div>
+        <div id="tries" class="badge">Tries: <span id="score">0</span></div>
+        <div id="tries-left" class="badge">Tries Left: <span id="score">0</span></div>
+        <div id="guesses" class="badge">Letters Guess So Far:</div>
+    </div>
+    <br>
+    <br>
+    <div id="result-banner">
+        <p>Let's Begin!</p>
+    </div>
+    <br>
+    <br>
+   <div class="letters">
+        <a href="" class="button">A</a>
+        <a href="" class="button">B</a>
+        <a href="" class="button">C</a>
+        <a href="" class="button">D</a>
+        <a href="" class="button">E</a>
+        <a href="" class="button">F</a>
+        <a href="" class="button">G</a>
+        <a href="" class="button">H</a>
+        <a href="" class="button">I</a>
+        <a href="" class="button">J</a>
+        <a href="" class="button">K</a>
+        <a href="" class="button">L</a>
+        <a href="" class="button">M</a>
+        <br>
+        <br>
+        <a href="" class="button">N</a>
+        <a href="" class="button">O</a>
+        <a href="" class="button">P</a>
+        <a href="" class="button">Q</a>
+        <a href="" class="button">R</a>
+        <a href="" class="button">S</a>
+        <a href="" class="button">T</a>
+        <a href="" class="button">U</a>
+        <a href="" class="button">V</a>
+        <a href="" class="button">W</a>
+        <a href="" class="button">X</a>
+        <a href="" class="button">Y</a>
+        <a href="" class="button">Z</a>
+    </div>
+    <br>
+    <br>
+    <p class="message">Make Your Move!</p>
+
+    <form action="javascript:void(0);">
+        <input id="play-again" type="button" value="Play Again?">
+    </form>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
